@@ -2,7 +2,25 @@ const Firm = require('../models/Firm');
 const Vendor = require('../models/Vendor')
 const multer = require('multer');
 const path = require('path');
+// const { CloudinaryStorage } = require('multer-storage-cloudinary');
+// const cloudinary = require('cloudinary').v2;
 
+
+// cloudinary.config({
+//   cloud_name: 'YOUR_CLOUD_NAME',
+//   api_key: 'YOUR_API_KEY',
+//   api_secret: 'YOUR_API_SECRET'
+// });
+
+// const storage = new CloudinaryStorage({
+//   cloudinary: cloudinary,
+//   params: {
+//     folder: 'firms',
+//     allowed_formats: ['jpg', 'jpeg', 'png'],
+//   },
+// });
+
+// const upload = multer({ storage: storage });
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
